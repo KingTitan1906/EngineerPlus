@@ -1,0 +1,23 @@
+{
+    "format_version": 3,
+    "header": {
+        "name": "§aEngineerPlus §e[§3RP§e]§f",
+        "description": "pack.description",
+        "uuid": "b9874334-bdbf-466e-8921-b5fa38e0b2c8",
+        "version": "1.0.0",
+        "min_engine_version": "1.21.110"
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "0427d40f-2569-4c3a-9aba-d5114a4f0f4c",
+            "version": "1.0.0"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "815885ca-c12d-470c-9b6b-895c6a658c37",
+            "version": "1.0.0"
+        }
+    ]
+}

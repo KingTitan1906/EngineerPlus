@@ -1,0 +1,31 @@
+{
+    "format_version": 3,
+    "header": {
+        "name": "§aEngineerPlus §e[§4BP§e]§f",
+        "description": "pack.description",
+        "uuid": "815885ca-c12d-470c-9b6b-895c6a658c37",
+        "version": "1.0.0",
+        "min_engine_version": "1.21.110"
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "ac5f87dc-133d-491a-a880-dcbce1963297",
+            "version": "1.0.0"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.2.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        },
+        {
+            "uuid": "b9874334-bdbf-466e-8921-b5fa38e0b2c8",
+            "version": "1.0.0"
+        }
+    ]
+}
