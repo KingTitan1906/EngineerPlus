@@ -12,6 +12,13 @@
             "type": "data",
             "uuid": "ac5f87dc-133d-491a-a880-dcbce1963297",
             "version": "1.0.0"
+        },
+        {
+            "type": "script",
+            "language": "javascript",
+            "uuid": "3a0d5d00-a395-4c92-836e-a46031d5c2e0",
+            "entry": "scripts/main.js",
+            "version": "1.0.0"
         }
     ],
     "dependencies": [

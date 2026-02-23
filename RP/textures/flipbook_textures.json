@@ -1,0 +1,9 @@
+[
+    {
+		"flipbook_texture": "textures/blocks/conveyor/conveyor_iron_c0e",
+		"atlas_tile": "conveyor_iron_c0e",
+		"ticks_per_frame": 4,
+        "frames": [0, 1, 2],
+		"blend_frames": false
+	}
+]

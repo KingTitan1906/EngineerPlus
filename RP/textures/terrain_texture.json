@@ -1,0 +1,14 @@
+{
+    "resource_pack_name": "EngineerPlus Blocks",
+    "texture_name": "atlas.terrain",
+    "num_mip_levels": 4,
+    "padding": 0,
+    "texture_data": {
+        "conveyor_iron_c0d": {
+            "textures": "textures/blocks/conveyor/conveyor_iron_c0d"
+        },
+        "conveyor_iron_c0e": {
+            "textures": "textures/blocks/conveyor/conveyor_iron_c0e"
+        }
+    }
+}
