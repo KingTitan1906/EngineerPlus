@@ -12,7 +12,9 @@
                 }
             },
             "states": {
-                "toggle:enabled": [false, true],
+                "time:sound": {"values": {"min": 0, "max": 5}},
+                "toggle:enabled": [true, false],
+                "toggle:con_north": [false, true],
                 "toggle:con_south": [false, true],
                 "toggle:con_west": [false, true],
                 "toggle:con_east": [false, true]
@@ -45,13 +47,15 @@
                             "texture": "conveyor_iron_c0e"
                         }
                     },
+                    "engineerplus:connection4_block": {},
                     "engineerplus:sound_loop_block": {
                         "sound": "engineerplus.block.conveyor",
-                        "volume": 0.6
+                        "volume": 0.6,
+                        "max_time": 5
                     },
                     "minecraft:tick": {
                         "looping": true,
-                        "interval_range": [20, 20]
+                        "interval_range": [4, 4]
                     }
                 }
             },
@@ -62,7 +66,8 @@
                         "*": {
                             "texture": "conveyor_iron_c0d"
                         }
-                    }
+                    },
+                    "engineerplus:connection4_block": {}
                 }
             },
             {
