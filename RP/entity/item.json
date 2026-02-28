@@ -1,0 +1,43 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "engineerplus:item",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "geometry": {
+                "default": "geometry.player_template",
+
+                "toolbox": "geometry.toolbox"
+            },
+            "textures": {
+                "default": "textures/none",
+
+                "toolbox": "textures/items/toolbox"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.toolbox = q.is_item_name_any('slot.weapon.mainhand', 0, 'engineerplus:toolbox');",
+                    "v.citem = v.toolbox;"
+                ],
+                "animate": [
+                    {"base": "!v.citem"},
+                    {"block": "q.property('enum:type') == 'block'"},
+                    {"toolbox": "v.toolbox"}
+                ]
+            },
+            "animations": {
+                "base": "animation.item.base",
+                "block": "animation.item.block",
+                "toolbox": "animation.item.toolbox"
+            },
+            "render_controllers": [
+                "controller.render.default",
+
+                {"controller.render.item.toolbox": "v.toolbox"}
+            ],
+            "enable_attachables": true
+        }
+    }
+}

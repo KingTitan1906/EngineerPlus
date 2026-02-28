@@ -35,3 +35,13 @@ export function setConnectionPreset(face, prePosType) {
         if (face == "east") return PrePos4.east;
     }
 }
+export function checkEntityInArea(entity, area) {
+    const pos = entity.location;
+
+    if (pos.x >= area.min.x && pos.x <= area.max.x) {
+        if (pos.y >= area.min.y && pos.y <= area.max.y) {
+            if (pos.z >= area.min.z && pos.z <= area.max.z) return true;
+            else return false;
+        } else return false;
+    } else return false;
+}

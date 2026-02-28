@@ -1,0 +1,11 @@
+{
+    "texture_name": "atlas.items",
+    "resource_pack_name": "EngineerPlus Items",
+    "texture_data": {
+        "icon:toolbox": {
+            "textures": {
+                "path": "textures/items/icons/toolbox"
+            }
+        }
+    }
+}

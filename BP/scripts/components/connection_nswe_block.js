@@ -69,12 +69,10 @@ export class ConnectionNSWEBlock {
 
                 if (i==0) {
                     if (nface == "north") nperm = nperm.withState(nfacePreset.south, false);
-                    if (nface == "south") nperm = nperm.withState(nfacePreset.south, false);
                     if (nface == "west") nperm = nperm.withState(nfacePreset.south, false);
                     if (nface == "east") nperm = nperm.withState(nfacePreset.south, false);
                 }
                 if (i==1) {
-                    if (nface == "north") nperm = nperm.withState(nfacePreset.north, false);
                     if (nface == "south") nperm = nperm.withState(nfacePreset.north, false);
                     if (nface == "west") nperm = nperm.withState(nfacePreset.north, false);
                     if (nface == "east") nperm = nperm.withState(nfacePreset.north, false);
@@ -83,12 +81,10 @@ export class ConnectionNSWEBlock {
                     if (nface == "north") nperm = nperm.withState(nfacePreset.east, false);
                     if (nface == "south") nperm = nperm.withState(nfacePreset.east, false);
                     if (nface == "west") nperm = nperm.withState(nfacePreset.east, false);
-                    if (nface == "east") nperm = nperm.withState(nfacePreset.east, false);
                 }
                 if (i==3) {
                     if (nface == "north") nperm = nperm.withState(nfacePreset.west, false);
                     if (nface == "south") nperm = nperm.withState(nfacePreset.west, false);
-                    if (nface == "west") nperm = nperm.withState(nfacePreset.west, false);
                     if (nface == "east") nperm = nperm.withState(nfacePreset.west, false);
                 }
                 nbl.setPermutation(nperm);

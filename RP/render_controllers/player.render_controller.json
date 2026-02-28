@@ -1,0 +1,17 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.item.toolbox": {
+            "geometry": "geometry.toolbox",
+            "textures": ["texture.toolbox"],
+            "materials": [ { "*": "material.default" } ],
+            "part_visibility": [
+                {
+                    "*": "!q.is_first_person",
+                    "rightArm": true,
+                    "rightItem": true
+                }
+            ]
+        }
+    }
+}

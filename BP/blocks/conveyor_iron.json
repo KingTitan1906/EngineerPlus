@@ -14,7 +14,7 @@
             "states": {
                 "time:sound": {"values": {"min": 0, "max": 5}},
                 "toggle:enabled": [true, false],
-                "toggle:con_north": [false, true],
+                "toggle:con_north": [true, false],
                 "toggle:con_south": [false, true],
                 "toggle:con_west": [false, true],
                 "toggle:con_east": [false, true]
@@ -48,9 +48,12 @@
                         }
                     },
                     "engineerplus:connection4_block": {},
+                    "engineerplus:conveyor": {
+                        "power": 0.075
+                    },
                     "engineerplus:sound_loop_block": {
                         "sound": "engineerplus.block.conveyor",
-                        "volume": 0.6,
+                        "volume": 0.4,
                         "max_time": 5
                     },
                     "minecraft:tick": {
