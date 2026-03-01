@@ -1,0 +1,50 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.player_custom.fp_preset": {
+            "loop": true,
+            "bones": {
+                "root": {
+                    "rotation": [0, 180, 0]
+                },
+                "rightArm": {
+                    "position": [-2, -1, -3],
+                    "rotation": [-90, 0, 0]
+                }
+            }
+        },
+        "animation.player_custom.move_legs": {
+            "loop": true,
+            "bones": {
+                "rightLeg": {
+                    "rotation": ["v.tcos1 * 35", 0, 0]
+                },
+                "leftLeg": {
+                    "rotation": ["v.tcos1 * -35", 0, 0]
+                }
+            }
+        },
+        "animation.player_custom.move_arms": {
+            "loop": true,
+            "bones": {
+                "rightArm": {
+                    "rotation": ["v.tcos1 * -35", 0, 0]
+                },
+                "leftArm": {
+                    "rotation": ["v.tcos1 * 35", 0, 0]
+                }
+            }
+        },
+        "animation.player_custom.idle": {
+            "loop": true,
+            "bones": {
+                "rightArm": {
+                    "rotation": ["v.tcos3*-1.5", 0, "v.tcos3 * 2 + 2"]
+                },
+                "leftArm": {
+                    "rotation": ["v.tcos3*1.5", 0, "v.tcos3 * -2 - 2"]
+                }
+            }
+        }
+    }
+}

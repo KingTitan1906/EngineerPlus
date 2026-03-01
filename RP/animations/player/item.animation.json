@@ -1,0 +1,21 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.player_custom.item.toolbox_fp": {
+            "loop": true,
+            "bones": {
+                "rightItem": {
+                    "rotation": [75, 0, 0]
+                }
+            }
+        },
+        "animation.player_custom.item.toolbox_tp": {
+            "loop": true,
+            "bones": {
+                "rightArm": {
+                    "rotation": [0, 0, 10]
+                }
+            }
+        }
+    }
+}

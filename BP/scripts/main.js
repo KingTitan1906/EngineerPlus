@@ -19,12 +19,15 @@ world.beforeEvents.playerInteractWithBlock.subscribe(e => {
     const pl = e.player;
     const it = e.itemStack;
 
-    if (it && it.typeId == "minecraft:stick") {
+    if (it && it.typeId == "engineerplus:debug") {
+        pl.sendMessage(`§7--------------------`);
+        pl.sendMessage(`Block: §9${bl.typeId}`)
         pl.sendMessage(`BlockStates:`);
         const states = bl.permutation.getAllStates();
         for (const [key, value] of Object.entries(states)) {
-            pl.sendMessage(`- ${key}: ${value}`);
+            pl.sendMessage(`- §9${key}: §3${value}`);
         }
+        pl.sendMessage(`§7--------------------`);
     }
 })
 

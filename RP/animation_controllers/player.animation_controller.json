@@ -1,0 +1,43 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player_custom.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [ "pc.idle" ],
+                    "transitions": [
+                        {"moving": "q.is_moving"}
+                    ],
+                    "blend_transition": 0.2
+                },
+                "moving": {
+                    "animations": [ "pc.move_legs", "pc.move_arms" ],
+                    "transitions": [
+                        {"default": "!q.is_moving"}
+                    ],
+                    "blend_transition": 0.2
+                }
+            }
+        },
+        "controller.animation.player_custom.item": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {"toolbox": "v.toolbox"}
+                    ]
+                },
+                "toolbox": {
+                    "animations": [
+                        {"item.toolbox_fp": "v.is_first_person"},
+                        {"item.toolbox_tp": "!v.is_first_person"}
+                    ],
+                    "transitions": [
+                        {"default": "!v.toolbox"}
+                    ]
+                }
+            }
+        }
+    }
+}

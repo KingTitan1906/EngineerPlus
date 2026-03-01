@@ -9,6 +9,16 @@
                     "*": "material.default"
                 }
             ]
+        },
+        "controller.render.player_custom.first_person": {
+            "geometry": "geometry.default",
+            "textures": ["texture.default"],
+            "materials": [ { "*": "material.default" } ],
+            "part_visibility": [
+                { "*": false },
+                { "rightArm": true },
+                { "rightItem": true }
+            ]
         }
     }
 }

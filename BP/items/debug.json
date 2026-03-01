@@ -2,15 +2,17 @@
     "format_version": "1.21.50",
     "minecraft:item": {
         "description": {
-            "identifier": "engineerplus:toolbox",
+            "identifier": "engineerplus:debug",
             "menu_category": {
                 "category": "equipment"
             }
         },
         "components": {
             "minecraft:max_stack_size": 1,
-            "minecraft:stacked_by_data": false,
-            "minecraft:icon": "icon:toolbox"
+            "minecraft:display_name": {
+                "value": "Debug Stick"
+            },
+            "minecraft:icon": "stick"
         }
     }
 }

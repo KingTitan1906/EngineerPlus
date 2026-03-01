@@ -16,7 +16,7 @@
         "toolbox": "textures/items/toolbox"
       },
       "geometry": {
-        "default": "geometry.humanoid.custom",
+        "default": "geometry.player_custom",
         "cape": "geometry.cape",
 
         "toolbox": "geometry.toolbox"
@@ -41,10 +41,20 @@
           "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);",
           "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
 
-          "v.toolbox = query.is_item_name_any('slot.weapon.mainhand', 0, 'engineerplus:toolbox');"
+          "v.tcos05 = (math.cos(query.modified_distance_moved * 76.34) * query.modified_move_speed / variable.gliding_speed_value);",
+          "v.tcos1 = (math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value);",
+          "v.tcos2 = math.cos(query.modified_distance_moved * 19.085);",
+          "v.tcos3 = math.cos(query.life_time * 38.17);",
+          "v.tcos3L = math.cos(query.life_time * 51.51);",
+          
+          "v.toolbox = query.is_item_name_any('slot.weapon.mainhand', 0, 'engineerplus:toolbox');",
+          "v.citem = v.toolbox;"
         ],
         "animate": [
-          "root"
+          {"pc.root": "!v.is_first_person"},
+          {"pc.fp_preset": "v.is_first_person"},
+          {"pc.item": "v.citem"},
+          "look_at_target"
         ]
       },
       "animations": {
@@ -108,24 +118,21 @@
         "brushing": "animation.humanoid.brushing",
         "crawling": "animation.player.crawl",
         "crawling.legs": "animation.player.crawl.legs",
-        "holding_heavy_core": "animation.player.holding_heavy_core"
+        "holding_heavy_core": "animation.player.holding_heavy_core",
+
+        "pc.root": "controller.animation.player_custom.root",
+        "pc.item": "controller.animation.player_custom.item",
+        "pc.fp_preset": "animation.player_custom.fp_preset",
+        "pc.idle": "animation.player_custom.idle",
+        "pc.move_legs": "animation.player_custom.move_legs",
+        "pc.move_arms": "animation.player_custom.move_arms",
+
+        "item.toolbox_fp": "animation.player_custom.item.toolbox_fp",
+        "item.toolbox_tp": "animation.player_custom.item.toolbox_tp"
       },
       "render_controllers": [
-        {
-          "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator"
-        },
-        {
-          "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator"
-        },
-        {
-          "controller.render.player.first_person": "variable.is_first_person && !query.is_spectator"
-        },
-        {
-          "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator"
-        },
-        {
-          "controller.render.player.map": "variable.map_face_icon"
-        },
+        {"controller.render.default": "!v.is_first_person"},
+        {"controller.render.player_custom.first_person": "v.is_first_person"},
 
         { "controller.render.item.toolbox": "v.toolbox" }
       ],

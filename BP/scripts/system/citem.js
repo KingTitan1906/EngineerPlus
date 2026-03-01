@@ -1,4 +1,4 @@
-import { BlockTypes, system, world } from "@minecraft/server";
+import { system, world } from "@minecraft/server";
 import { calculateDistance, calculateDistanceInVector3, isItemBlock } from "../util";
 
 world.beforeEvents.playerInteractWithEntity.subscribe(e => {
@@ -10,7 +10,7 @@ world.beforeEvents.playerInteractWithEntity.subscribe(e => {
         const epos = ent.location;
         const dis = calculateDistance(calculateDistanceInVector3(ppos, epos));
 
-        if (dis >= 1.5) {
+        if (dis >= 1.15) {
             e.cancel = true;
             return;
         }
@@ -19,7 +19,14 @@ world.beforeEvents.playerInteractWithEntity.subscribe(e => {
 
         if (item) {
             system.run(() => {
-                pl.getComponent("minecraft:inventory").container.addItem(item);
+                const inv = pl.getComponent("minecraft:inventory");
+                
+                if (inv.container.emptySlotsCount == 0) {
+                    e.cancel = true;
+                    return;
+                }
+
+                inv.container.addItem(item);
                 ent.remove();
             });
         }
@@ -28,9 +35,9 @@ world.beforeEvents.playerInteractWithEntity.subscribe(e => {
 
 world.afterEvents.entitySpawn.subscribe(e => {
     const ent = e.entity;
-    const dim = ent.dimension;
 
     if (ent.typeId == "minecraft:item") {
+        const dim = ent.dimension;
         system.runTimeout(() => {
             const item = ent.getComponent("minecraft:item").itemStack;
             const pos = ent.location;
