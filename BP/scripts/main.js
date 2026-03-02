@@ -21,9 +21,9 @@ world.beforeEvents.playerInteractWithBlock.subscribe(e => {
 
     if (it && it.typeId == "engineerplus:debug") {
         pl.sendMessage(`§7--------------------`);
-        pl.sendMessage(`Block: §9${bl.typeId}`)
-        pl.sendMessage(`BlockStates:`);
+        pl.sendMessage(`Block: §9${bl.typeId}`);
         const states = bl.permutation.getAllStates();
+        if (Object.entries(states).length > 0) pl.sendMessage(`Blockstates:`);
         for (const [key, value] of Object.entries(states)) {
             pl.sendMessage(`- §9${key}: §3${value}`);
         }

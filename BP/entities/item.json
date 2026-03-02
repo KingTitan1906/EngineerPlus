@@ -21,6 +21,15 @@
             }
         },
         "components": {
+            "minecraft:buoyant": {
+                "base_buoyancy": 0.95,
+                "apply_gravity": true,
+                "simulate_waves": true,
+                "liquid_blocks": [
+                    "minecraft:water",
+                    "minecraft:flowing_water"
+                ]
+            },
             "minecraft:behavior.equip_item": {
                 "priority": 0
             },

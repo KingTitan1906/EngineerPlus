@@ -52,7 +52,7 @@
         ],
         "animate": [
           {"pc.root": "!v.is_first_person"},
-          {"pc.fp_preset": "v.is_first_person"},
+          {"pc.fp_preset": "v.is_first_person && (v.citem || !q.is_item_equipped('main_hand'))"},
           {"pc.item": "v.citem"},
           "look_at_target"
         ]
@@ -123,6 +123,7 @@
         "pc.root": "controller.animation.player_custom.root",
         "pc.item": "controller.animation.player_custom.item",
         "pc.fp_preset": "animation.player_custom.fp_preset",
+        "pc.sneaking": "animation.player_custom.sneaking_preset",
         "pc.idle": "animation.player_custom.idle",
         "pc.move_legs": "animation.player_custom.move_legs",
         "pc.move_arms": "animation.player_custom.move_arms",

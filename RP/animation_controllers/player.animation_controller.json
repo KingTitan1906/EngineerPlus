@@ -5,14 +5,14 @@
             "initial_state": "default",
             "states": {
                 "default": {
-                    "animations": [ "pc.idle" ],
+                    "animations": [ "pc.idle", {"pc.sneaking": "q.is_sneaking"} ],
                     "transitions": [
                         {"moving": "q.is_moving"}
                     ],
                     "blend_transition": 0.2
                 },
                 "moving": {
-                    "animations": [ "pc.move_legs", "pc.move_arms" ],
+                    "animations": [ "pc.move_legs", "pc.move_arms", {"pc.sneaking": "q.is_sneaking"} ],
                     "transitions": [
                         {"default": "!q.is_moving"}
                     ],

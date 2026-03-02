@@ -1,0 +1,39 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "engineerplus:toolbox"
+        },
+        "tags": [ "crafting_table" ],
+        "pattern": [
+            "iii",
+            "rsr",
+            "IbI"
+        ],
+        "unlock": {
+            "context": "PlayerHasManyItems",
+            "item": "minecraft:smithing_table"
+        },
+        "key": {
+            "i": {
+                "item": "minecraft:iron_nugget"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            },
+            "r": {
+                "item": "minecraft:red_dye"
+            },
+            "s": {
+                "item": "minecraft:smithing_table"
+            },
+            "b": {
+                "item": "minecraft:black_dye"
+            }
+        },
+        "result": {
+            "item": "engineerplus:toolbox",
+            "count": 1
+        }
+    }
+}

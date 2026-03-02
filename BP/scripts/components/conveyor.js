@@ -145,11 +145,6 @@ export class Conveyor {
                 if (con_west && checkEntityInArea(ent, caw)) ent.applyImpulse({x:0, y:0, z:power});
                 if (con_east && checkEntityInArea(ent, cae)) ent.applyImpulse({x:0, y:0, z:-power});
             }
-
-            // if (con_north) ent.applyImpulse({x:0, y:0, z:-power});
-            // if (con_south) ent.applyImpulse({x:0, y:0, z:power});
-            // if (con_west) ent.applyImpulse({x:-power, y:0, z:0});
-            // if (con_east) ent.applyImpulse({x:power, y:0, z:0});
         }
     }
 }

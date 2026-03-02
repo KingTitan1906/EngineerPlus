@@ -45,6 +45,21 @@
                     "rotation": ["v.tcos3*1.5", 0, "v.tcos3 * -2 - 2"]
                 }
             }
+        },
+        "animation.player_custom.sneaking_preset": {
+            "loop": true,
+            "bones": {
+                "waist": {
+                    "position": [0, 0, 3],
+                    "rotation": [20, 0, 0]
+                },
+                "rightLeg": {
+                    "position": [0, 0, 3]
+                },
+                "leftLeg": {
+                    "position": [0, 0, 3]
+                }
+            }
         }
     }
 }

@@ -16,6 +16,7 @@
             "materials": [ { "*": "material.default" } ],
             "part_visibility": [
                 { "*": false },
+                { "rightSleeve": true },
                 { "rightArm": true },
                 { "rightItem": true }
             ]
