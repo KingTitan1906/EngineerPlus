@@ -1,3 +1,4 @@
+import { BlockCustomComponentInstance } from "@minecraft/server";
 import { checkEntityInArea } from "./help/functions";
 
 const AreaChecking = {
@@ -91,6 +92,8 @@ export class Conveyor {
         let perm = bl.permutation;
         const face = perm.getState("minecraft:cardinal_direction");
         const power = arg.params.power;
+        const max_coe = arg.params.counts_of_entity;
+        let coe = 0;
         const pos = bl.location;
 
         const area = setAreaCheckingPreset(face);
@@ -117,9 +120,15 @@ export class Conveyor {
             min: {x: pos.x + area.east.min.x, y: pos.y + area.east.min.y, z: pos.z + area.east.min.z},
             max: {x: pos.x + area.east.max.x, y: pos.y + area.east.max.y, z: pos.z + area.east.max.z}
         }
+        const cf = {
+            min: {x: pos.x + 0.0, y: pos.y + 0.0, z: pos.z +0.0},
+            max: {x: pos.x + 0.99, y: pos.y + 0.15, z: pos.z + 0.99}
+        }
 
         for (let i = 0; i < ents.length; i++) {
             const ent = ents[i];
+
+            if (checkEntityInArea(ent, cf)) coe++;
 
             if (face == "north") {
                 if (con_north && checkEntityInArea(ent, can)) ent.applyImpulse({x:0, y:0, z:-power});
@@ -145,6 +154,11 @@ export class Conveyor {
                 if (con_west && checkEntityInArea(ent, caw)) ent.applyImpulse({x:0, y:0, z:power});
                 if (con_east && checkEntityInArea(ent, cae)) ent.applyImpulse({x:0, y:0, z:-power});
             }
+        }
+
+        if (coe >= max_coe) {
+            perm = perm.withState("toggle:enabled", false);
+            bl.setPermutation(perm);
         }
     }
 }

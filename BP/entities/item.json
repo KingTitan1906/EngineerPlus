@@ -21,6 +21,9 @@
             }
         },
         "components": {
+            "minecraft:friction_modifier": {
+                "value": 1.1
+            },
             "minecraft:buoyant": {
                 "base_buoyancy": 0.95,
                 "apply_gravity": true,

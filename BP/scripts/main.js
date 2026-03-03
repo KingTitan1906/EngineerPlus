@@ -1,10 +1,12 @@
 import { system, world } from '@minecraft/server';
 
 import "./system/citem";
+import "./system/itemSensor";
 
 import { SoundLoopBlock } from './components/sound_loop_block';
 import { ConnectionNSWEBlock } from './components/connection_nswe_block';
 import { Conveyor } from './components/conveyor';
+import { Toolbox } from './components/toolbox';
 
 system.runInterval(() => {
     world.getAllPlayers().forEach(pl => {
@@ -35,4 +37,6 @@ system.beforeEvents.startup.subscribe(init => {
     init.blockComponentRegistry.registerCustomComponent("engineerplus:sound_loop_block", new SoundLoopBlock());
     init.blockComponentRegistry.registerCustomComponent("engineerplus:connection4_block", new ConnectionNSWEBlock());
     init.blockComponentRegistry.registerCustomComponent("engineerplus:conveyor", new Conveyor());
+
+    init.itemComponentRegistry.registerCustomComponent("engineerplus:toolbox", new Toolbox());
 });

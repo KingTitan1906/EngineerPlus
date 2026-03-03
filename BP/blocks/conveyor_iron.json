@@ -49,7 +49,8 @@
                     },
                     "engineerplus:connection4_block": {},
                     "engineerplus:conveyor": {
-                        "power": 0.075
+                        "power": 0.05,
+                        "counts_of_entity": 16
                     },
                     "engineerplus:sound_loop_block": {
                         "sound": "engineerplus.block.conveyor",
