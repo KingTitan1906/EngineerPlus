@@ -1,0 +1,25 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:crafting_items_catalog": {
+        "categories": [
+            {
+                "category_name": "construction",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "icon": "engineerplus:conveyor_iron",
+                            "name": "catalog:conveyors"
+                        },
+                        "items": [
+                            "engineerplus:conveyor_copper",
+                            "engineerplus:conveyor_iron",
+                            "engineerplus:conveyor_gold",
+                            "engineerplus:conveyor_diamond",
+                            "engineerplus:conveyor_netherite"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

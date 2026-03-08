@@ -1,6 +1,12 @@
 pack.description=Этот адд-он был сделан Wuntare'ом.
 
+catalog:conveyors=Конвееры
+
+tile.engineerplus:conveyor_copper.name=Медный конвеер
 tile.engineerplus:conveyor_iron.name=Железный конвеер
+tile.engineerplus:conveyor_gold.name=Золотой конвеер
+tile.engineerplus:conveyor_diamond.name=Алмазный конвеер
+tile.engineerplus:conveyor_netherite.name=Незеритовый конвеер
 
 item.engineerplus:toolbox=Ящик с инструментами
 

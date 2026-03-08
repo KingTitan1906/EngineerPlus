@@ -1,10 +1,16 @@
+const blockIds = [
+    "engineerplus:conveyor_copper", "engineerplus:conveyor_iron",
+    "engineerplus:conveyor_gold", "engineerplus:conveyor_diamond",
+    "engineerplus:conveyor_netherite"
+];
+
 export class Toolbox {
     onUseOn(e) {
         const pl = e.source;
         const it = e.itemStack;
         const bl = e.block;
 
-        if (bl.typeId == "engineerplus:conveyor_iron") {
+        if (blockIds.includes(bl.typeId)) {
             const inv = pl.getComponent("minecraft:inventory");
             const slot = inv.container.find(it);
             let lores = it.getRawLore();

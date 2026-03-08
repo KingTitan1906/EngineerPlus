@@ -1,6 +1,12 @@
 pack.description=This add-on was created by Wuntare.
 
-tile.engineerplus:conveyor_iron.name=Iron conveyor
+catalog:conveyors=Conveyors
+
+tile.engineerplus:conveyor_copper.name=Copper Conveyor
+tile.engineerplus:conveyor_iron.name=Iron Conveyor
+tile.engineerplus:conveyor_gold.name=Gold Conveyor
+tile.engineerplus:conveyor_diamond.name=Diamond Conveyor
+tile.engineerplus:conveyor_netherite.name=Netherite Conveyor
 
 item.engineerplus:toolbox=Toolbox
 

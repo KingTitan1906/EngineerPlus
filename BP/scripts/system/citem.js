@@ -6,11 +6,11 @@ world.beforeEvents.playerInteractWithEntity.subscribe(e => {
     const ent = e.target;
 
     if (ent.typeId == "engineerplus:item") {
-        const ppos = pl.location;
+        const ppos = pl.getHeadLocation();
         const epos = ent.location;
         const dis = calculateDistance(calculateDistanceInVector3(ppos, epos));
 
-        if (dis >= 1.15) {
+        if (dis >= 1.35) {
             e.cancel = true;
             return;
         }
@@ -42,15 +42,23 @@ world.afterEvents.entitySpawn.subscribe(e => {
             const item = ent.getComponent("minecraft:item").itemStack;
             const pos = ent.location;
 
+            let vel = ent.getVelocity();
+            vel.x = vel.x*1.2;
+            vel.y = vel.y*1.2;
+            vel.z = vel.z*1.2;
+
             const isBlock = isItemBlock(item);
 
             const nitem = dim.spawnEntity("engineerplus:item", pos);
+            nitem.applyImpulse(vel);
             nitem.getComponent("minecraft:inventory").container.addItem(item);
             nitem.runCommand(`replaceitem entity @s slot.weapon.mainhand 0 ${item.typeId}`);
             nitem.setRotation({x: 0, y: Math.random()*360});
 
+            if (!item.typeId.includes("netherite")) nitem.addTag("not_netherite");
+
             if (isBlock) nitem.setProperty("enum:type", "block");
             ent.remove();
-        }, 7);
+        });
     }
 });

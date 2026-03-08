@@ -2,7 +2,7 @@
     "format_version": "1.21.50",
     "minecraft:block": {
         "description": {
-            "identifier": "engineerplus:conveyor_iron",
+            "identifier": "engineerplus:conveyor_copper",
             "menu_category": {
                 "category": "construction"
             },
@@ -49,8 +49,8 @@
                     },
                     "engineerplus:connection4_block": {},
                     "engineerplus:conveyor": {
-                        "power": 0.08,
-                        "counts_of_entity": 8
+                        "power": 0.05,
+                        "counts_of_entity": 4
                     },
                     "engineerplus:sound_loop_block": {
                         "sound": "engineerplus.block.conveyor",

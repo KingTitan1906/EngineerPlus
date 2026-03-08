@@ -55,16 +55,59 @@
             "minecraft:damage_sensor": {
                 "triggers": [
                     {
-                        "cause": "all",
-                        "deals_damage": "no"
+                        "cause": "lava",
+                        "on_damage": {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "==",
+                                "value": "not_netherite"
+                            },
+                            "event": "system:despawn",
+                            "target": "self"
+                        }
                     },
                     {
-                        "cause": "lava",
-                        "deals_damage": "yes",
+                        "cause": "contact",
                         "on_damage": {
                             "event": "system:despawn",
                             "target": "self"
                         }
+                    },
+                    {
+                        "cause": "fire",
+                        "on_damage": {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "==",
+                                "value": "not_netherite"
+                            },
+                            "event": "system:despawn",
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "cause": "lightning",
+                        "on_damage": {
+                            "filters": {
+                                "test": "has_tag",
+                                "value": "not_netherite"
+                            },
+                            "event": "system:despawn",
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "cause": "void",
+                        "on_damage": {
+                            "event": "system:despawn",
+                            "target": "self"
+                        }
+                    },
+                    {
+                        "cause": "all",
+                        "deals_damage": "no"
                     }
                 ]
             },
