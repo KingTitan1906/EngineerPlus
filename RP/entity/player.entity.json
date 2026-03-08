@@ -51,8 +51,8 @@
           "v.citem = v.toolbox;"
         ],
         "animate": [
-          {"pc.root": "!v.is_first_person"},
-          {"pc.fp_preset": "v.is_first_person && (v.citem || !q.is_item_equipped('main_hand'))"},
+          {"pc.root": "!q.is_first_person"},
+          {"pc.fp_preset": "q.is_first_person && (v.citem || !q.is_item_equipped('main_hand'))"},
           {"pc.item": "v.citem"},
           "look_at_target"
         ]
@@ -132,8 +132,8 @@
         "item.toolbox_tp": "animation.player_custom.item.toolbox_tp"
       },
       "render_controllers": [
-        {"controller.render.default": "!v.is_first_person"},
-        {"controller.render.player_custom.first_person": "v.is_first_person"},
+        {"controller.render.default": "!q.is_first_person"},
+        {"controller.render.player_custom.first_person": "q.is_first_person"},
 
         { "controller.render.item.toolbox": "v.toolbox" }
       ],
